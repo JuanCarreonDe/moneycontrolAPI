@@ -1,6 +1,7 @@
 import { pool } from "../db.js";
 
 export const getUsers = async (req, res) => {
+ res.header('Access-Control-Allow-Origin', '*')
   try {
     const result = await pool.query("SELECT * FROM users");
     res.json(result);
@@ -12,6 +13,7 @@ export const getUsers = async (req, res) => {
 };
 
 export const getUserBalance = async (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*')
   const { idUser } = req.params;
 
   try {
