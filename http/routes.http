@@ -1,0 +1,22 @@
+get http://localhost:3000/api/userBalance/1
+
+####
+post http://localhost:3000/api/transaction/1
+Content-Type: application/json
+
+{
+    "amount": 360,
+    "description": "Api Ttransacción",
+    "idCategory": 5,
+    "idAccount": 1,
+    "isIncome": 0
+}
+
+####
+put http://localhost:3000/api/transaction/1
+
+####
+PATCH   http://localhost:3000/api/transaction/1
+
+####
+get http://localhost:3000/api/bd
