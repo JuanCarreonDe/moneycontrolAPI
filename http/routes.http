@@ -6,10 +6,10 @@ Content-Type: application/json
 
 {
     "amount": 360,
-    "description": "Api Ttransacción",
+    "description": "Local",
     "idCategory": 5,
     "idAccount": 1,
-    "isIncome": 0
+    "isIncome": 4
 }
 
 ####

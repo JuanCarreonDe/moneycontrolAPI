@@ -12,15 +12,14 @@ export const getUsers = async (req, res) => {
 };
 
 export const getUserBalance = async (req, res) => {
-    const { idUser } = req.params;
+  const { idUser } = req.params;
 
   try {
-    const result = await pool.query("call getUserBalance(?);", [idUser]);
-    res.json(result[0]);
+    const [result] = await pool.query("call getUserBalance(?);", [idUser]);
+    res.json(result[0][0]);
   } catch (error) {
     return res.status(500).json({
       message: "Opps, Algo salio mal",
     });
   }
-  console.log(idUser);
 };
