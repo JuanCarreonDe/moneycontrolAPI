@@ -1,6 +1,7 @@
 import { pool } from "../db.js";
 
 export const insertTransaction = async (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*')
   const { idUser } = req.params;
   const { amount, description, idCategory, idAccount, isIncome } = req.body;
   try {
@@ -22,6 +23,7 @@ export const insertTransaction = async (req, res) => {
 };
 
 export const deleteTransaction = (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*')
   try {
     res.send("Dropping transaction");
   } catch (error) {
@@ -32,6 +34,7 @@ export const deleteTransaction = (req, res) => {
 };
 
 export const updateTransaction = (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*')
   try {
     res.send("Edditing transaction");
   } catch (error) {
