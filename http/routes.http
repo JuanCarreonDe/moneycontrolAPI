@@ -23,3 +23,25 @@ PATCH   http://localhost:3000/api/transaction/1
 
 ####
 get http://localhost:3000/api/bd
+
+###
+post http://localhost:3000/api/getTransactionsOfDay/1
+Content-Type: application/json
+
+{
+    "day": "25",
+    "month":"12",
+    "year": "2023",
+    "idUser": 1
+}
+
+###
+post http://localhost:3000/api/getIncomeAndExpenseTotals/1
+Content-Type: application/json
+
+{
+    "day": null,
+    "month": null,
+    "year": "2023",
+    "idUser": 1
+}
