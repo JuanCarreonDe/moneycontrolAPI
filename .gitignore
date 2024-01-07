@@ -1,6 +1,10 @@
 node_modules
+<<<<<<< HEAD
 .env
 ../server
 ../client
 client
 server
+=======
+.env
+>>>>>>> bf6aef4e69a696edbc8379c6a4c1868f7c1704b0
