@@ -4,5 +4,4 @@ node_modules
 ../client
 client
 server
-=======
-.env
+http
