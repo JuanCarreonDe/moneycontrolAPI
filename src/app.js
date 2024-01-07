@@ -13,7 +13,7 @@ app.use("/api",usersRoutes)
 
 app.use((req, res, next) =>[
     res.status(404).json({
-        message: 'Opps, no fue posible encontrar ese endpoint'
+        message: 'Opps, no fue posible encontrar este endpoint'
     })
 ])
 
