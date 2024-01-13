@@ -87,7 +87,7 @@ export const getMonthTotals = async (req, res) => {
       year,
       idUser,
     ]);
-    res.json(result[0]);
+    res.json(result[0][0]);
   } catch (error) {
     return res.status(500).json({
       message: `Opps, Algo salio mal ${error}`,
