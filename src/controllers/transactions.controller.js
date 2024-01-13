@@ -77,3 +77,37 @@ export const getIncomeAndExpenseTotals = async (req, res) => {
     });
   }
 };
+
+export const getMonthTotals = async (req, res) => {
+  const { idUser } = req.params;
+  const { month, year } = req.body;
+  try {
+    const [result] = await pool.query("CALL getMonthTotals(?,?,?);", [
+      month,
+      year,
+      idUser,
+    ]);
+    res.json(result[0]);
+  } catch (error) {
+    return res.status(500).json({
+      message: `Opps, Algo salio mal ${error}`,
+    });
+  }
+};
+
+export const getDaysTotals = async (req, res) => {
+  const { idUser } = req.params;
+  const { month, year } = req.body;
+  try {
+    const [result] = await pool.query("CALL getDaysTotals(?,?,?);", [
+      month,
+      year,
+      idUser,
+    ]);
+    res.json(result[0]);
+  } catch (error) {
+    return res.status(500).json({
+      message: `Opps, Algo salio mal ${error}`,
+    });
+  }
+};

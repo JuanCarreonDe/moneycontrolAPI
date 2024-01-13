@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 
 ###
-post https://moneycontrolapi-production.up.railway.app/api/getIncomeAndExpenseTotals/1
+post http://localhost:3000/api/getIncomeAndExpenseTotals/1
 Content-Type: application/json
 
 {
