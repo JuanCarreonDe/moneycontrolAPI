@@ -44,12 +44,10 @@ export const updateTransaction = (req, res) => {
 
 export const getTransactionsOfDay = async (req, res) => {
   const { idUser } = req.params;
-  const { day, month, year } = req.body;
+  const { date} = req.body;
   try {
-    const [result] = await pool.query("CALL getTransactionsOfDay(?,?,?,?);", [
-      day,
-      month,
-      year,
+    const [result] = await pool.query("CALL getTransactionsOfDay(?,?);", [
+      date,
       idUser,
     ]);
     res.json(result[0]);
